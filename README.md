@@ -10,7 +10,7 @@
         1.length属性动态由get方法动态获取，复杂度为O(n)
 
         2.构造方法：可以直接init，然后手动插入结点
-            - (instrancetype)initWithArray:(NSarray *)array 由数组链表构造链表
+            - (instancetype)initWithArray:(NSarray *)array 由数组链表构造链表
 
         3.插入方法：
             - (void)insertObject:(id)object inIndex:(NSInteger)index; //此方法可以修改头结点，不推荐在单纯的链表数据结构中使用(index = 0时）
@@ -43,14 +43,14 @@
 方法说明：
 
         1.构造方法: 
-        -(instancetype)init //构造空栈
-        -(instancetype)initWithArray:(NSarray *)array //用数组元素构造栈
+        - (instancetype)init //构造空栈
+        - (instancetype)initWithArray:(NSarray *)array //用数组元素构造栈
 
         2.堆操作：   
-        -(void)clearStack //清栈
-        -(void)push:(id)object //元素进栈
-        -(id)pop //元素出栈，返回栈顶元素
-        -(BOOL)isEmpty  //判别是否空栈
+        - (void)clearStack //清栈
+        - (void)push:(id)object //元素进栈
+        - (id)pop //元素出栈，返回栈顶元素
+        - (BOOL)isEmpty  //判别是否空栈
 
         3.遍历方法  
         - (void)travelStack:(nullable void(^)(id currentObject))visitBlock;  //遍历栈中元素，再visitBlock中进行修改
@@ -65,16 +65,19 @@
         
 方法说明：
 
-        1.构造方法：-(instancetype)init //构造空队列 最大长度为1000
+        1.构造方法：
+        - (instancetype)init //构造空队列 最大长度为1000
         - (instancetype)initWithMaxLength:(NSInteger)length //自定最大长度构造队列
 
-        2.队列操作: - (void)clearQueue //清空队列 
+        2.队列操作: 
+        - (void)clearQueue //清空队列 
         - (id)Head;        //返回队头元素
         - (void)enQueue:(id)object; //元素入队，超过最大量则入溢出区
         - (id)DeQueue;            //元素出队，返回队头元素
 
-3.遍历方法  
-        - (void)travelStack:(nullable void(^)(id currentObject))visitBlock;  //遍历栈中元			  素，再visitBlock中进行修改
+        
+        3.遍历方法  
+        - (void)travelStack:(nullable void(^)(id currentObject))visitBlock;  //遍历栈中元素，再visitBlock中进行修改
 
 四、binaryTree 二叉树
 
@@ -89,11 +92,11 @@
         binaryTreeNode *leftChild //左孩子
         binaryTreeNode *right //右孩子
         binaryTreeNode *parent //双亲
-//以上属性可以根据用户需要自行赋值
+        //以上属性可以根据用户需要自行赋值
 
         bool leftTag //左标签
         bool rightTag //右标签
-//以上标签用于线索二叉树，用户私自修改会引发不可预知的后果
+        //以上标签用于线索二叉树，用户私自修改会引发不可预知的后果
 
         - (binaryTree *)leftSibling //返回左兄弟，若没有左兄弟，则返回nil
         - (binaryTree *)rightSibling //返回右兄弟，若没有右兄弟，则返回nil
@@ -104,7 +107,7 @@
         + (instancetype)treeWithArray:(NSArray *)array //用一个数组内的对象以先序遍历的方法构建二叉树
         + (instancetype)treeWithPreSequence:(NSArray *)preSequence andInSequence:(NSArray *)inSequence //用先序序列与中序序列构建二叉树
 
-        -（instanceType)init //创建空树
+        -（instancetype)init //创建空树
 
 
 
@@ -113,12 +116,13 @@
         - (void)inOrderTraverseWithBlock:(void(^)(binaryTreeNode *currentNode))visitBlock
         - (void)postOrderTraverseWithBlock:(void(^)(binaryTreeNode *currentNode))visitBlock
 
-3.线索化: 
+        3.线索化: 
         - (void)preOrderThreading//先序线索化
         - (void)inOrderThreading;//中序线索化
         - (void)postOrderThreading //后序线索化
         - (void)unthreading;//去线索化
-//线索化后，此二叉树的便利方法不再使用栈，可以节约空间资源
+
+        //线索化后，此二叉树的便利方法不再使用栈，可以节约空间资源
 
 
 五、AdGraph 邻接表图
@@ -165,6 +169,7 @@
         3.遍历:
         - (void)BFSWithBlock:(void (^)(AdGraphVNode *currentNode))visitBlock;
         //广度优先
+
         - (void)DFSWithBlock:(void (^)(AdGraphVNode *currentNode))visitBlock;
         //深度优先
 
@@ -214,7 +219,9 @@
         - (void)removeVNode:(OLGraphVNode *)VNode;
         //删除顶点并移除所有与此节点有关的弧
 
-        3.遍历:- (void)BFSWithBlock:(void (^)(OLGraphVNode *currentNode))visitBlock;
+        3.遍历:
+        - (void)BFSWithBlock:(void (^)(OLGraphVNode *currentNode))visitBlock;
         //广度优先
+
         - (void)DFSWithBlock:(void (^)(OLGraphVNode *currentNode))visitBlock;
         //深度优先

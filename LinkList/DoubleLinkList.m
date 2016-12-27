@@ -6,19 +6,19 @@
 //  Copyright © 2015年 Vincent_D. All rights reserved.
 //
 
-#import "doubleLinkList.h"
+#import "DoubleLinkList.h"
 
-@implementation doubleLinkList
+@implementation DoubleLinkList
 
 #pragma mark-
-#pragma 重写插入方法
+#pragma 插入方法
 - (void)insertObjectAtLastIndex:(id)object
 {
-    listNode *currentNode = self.head;
+    ListNode *currentNode = self.head;
     for (int i = 0; i < self.length - 1; i++) {
         currentNode = currentNode.next;
     }
-    listNode *newNode = [listNode creatNodeWithObject:object];
+    ListNode *newNode = [ListNode creatNodeWithObject:object];
     currentNode.next = newNode;
     newNode.pre = currentNode;
     
@@ -26,7 +26,7 @@
 
 - (void)insertObjectAtFirstIndex:(id)object
 {
-    listNode *newHead = [listNode creatNodeWithObject:object];
+    ListNode *newHead = [ListNode creatNodeWithObject:object];
     newHead.next = self.head;
     self.head.pre = newHead;
     self.head = newHead;
@@ -35,11 +35,11 @@
 - (void)insertObject:(id)object inIndex:(NSInteger)index
 {
     if (index < 0) { //输入出错
-        [NSException exceptionWithName:@"link oversize" reason:@"input index is small than zero" userInfo:nil];
+        [[NSException exceptionWithName:@"link oversize" reason:@"input index is small than zero" userInfo:nil] raise];
     }else
         
         if (index > self.length - 1) { //越界
-            //        [NSException exceptionWithName:@"link oversize" reason:@"input index is bigger than link's length" userInfo:nil]; //抛出异常
+            [[NSException exceptionWithName:@"link oversize" reason:@"input index is bigger than link's length" userInfo:nil] raise]; //抛出异常
             while (index > self.length) {
                 [self insertObjectAtLastIndex:nil];  //持续插入结点直到可以满足插入长度
             }
@@ -47,8 +47,8 @@
         }else if(index == 0){  //插入头结点
             [self insertObjectAtFirstIndex:object];
         }else{  //一般插入
-            listNode *currentNode = self.head;
-            listNode *newNode = [listNode creatNodeWithObject:object];
+            ListNode *currentNode = self.head;
+            ListNode *newNode = [ListNode creatNodeWithObject:object];
             for (int i = 0; i < index - 1; i++) {
                 currentNode = currentNode.next;
             }
@@ -60,7 +60,7 @@
 }
 
 #pragma mark -
-#pragma mark 重写移除结点方法
+#pragma mark 移除结点方法
 
 - (void)removeObjectInIndex:(NSInteger)index
 {
@@ -75,7 +75,7 @@
             if (index == 0) {
                 self.head = self.head.next;
             }else{
-                listNode *currentNode = self.head;
+                ListNode *currentNode = self.head;
                 for (int i = 0; i < index - 1; i++) {
                     currentNode = currentNode.next;
                 }
@@ -90,7 +90,7 @@
 
 - (void)destroyList
 {
-    [self travelList:^(listNode *currentNote, NSInteger index) {
+    [self travelList:^(ListNode *currentNote, NSInteger index) {
         currentNote.pre = nil;
     }];
 }

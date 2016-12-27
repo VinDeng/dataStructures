@@ -6,14 +6,14 @@
 //  Copyright © 2015年 Vincent_D. All rights reserved.
 //
 
-#import "binaryTreeNode.h"
+#import "BinaryTreeNode.h"
 
 
-@implementation binaryTreeNode
+@implementation BinaryTreeNode
 
-+ (instancetype)treeNodeWithValue:(id)value andParent:(binaryTreeNode *)Node;
++ (instancetype)treeNodeWithValue:(id)value andParent:(BinaryTreeNode *)Node;
 {
-    binaryTreeNode * newNode = [[binaryTreeNode alloc] init];
+    BinaryTreeNode * newNode = [[BinaryTreeNode alloc] init];
     newNode.parent = Node;
     newNode.value = value;
     newNode.leftChild = nil;
@@ -23,7 +23,7 @@
     return newNode;
 }
 
-- (binaryTreeNode *)leftSibling
+- (BinaryTreeNode *)leftSibling
 {
     if (!self.parent) {
         return nil;
@@ -36,7 +36,7 @@
    return self.parent.leftChild;
 }
 
-- (binaryTreeNode *)rightSibling
+- (BinaryTreeNode *)rightSibling
 {
     if (!self.parent) {
         return nil;

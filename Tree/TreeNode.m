@@ -6,13 +6,13 @@
 //  Copyright © 2015年 Vincent_D. All rights reserved.
 //
 
-#import "treeNode.h"
+#import "TreeNode.h"
 
-@implementation treeNode
+@implementation TreeNode
 
-+ (instancetype)treeNodeWithValue:(id)value andParent:(treeNode *)Node;
++ (instancetype)treeNodeWithValue:(id)value andParent:(TreeNode *)Node;
 {
-    treeNode * newNode = [[treeNode alloc] init];
+    TreeNode * newNode = [[TreeNode alloc] init];
     newNode.parent = Node;
     newNode.value = value;
     return newNode;

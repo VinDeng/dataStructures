@@ -7,24 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4418DF7F1BDE11770047A02A /* doubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418DF7E1BDE11770047A02A /* doubleLinkList.m */; };
-		4418DF861BDE24390047A02A /* stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418DF851BDE24390047A02A /* stack.m */; };
-		4418DF8A1BDF609C0047A02A /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4418DF891BDF609C0047A02A /* Queue.m */; };
-		441E3B011BD79FDE004CEC19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 441E3B001BD79FDE004CEC19 /* main.m */; };
-		441E3B091BD7A05A004CEC19 /* listNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 441E3B081BD7A05A004CEC19 /* listNode.m */; };
-		441E3B0C1BD8D8A6004CEC19 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 441E3B0B1BD8D8A6004CEC19 /* List.m */; };
-		4440AFB91BE0F808009C9594 /* GlistNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4440AFB81BE0F808009C9594 /* GlistNode.m */; };
-		4440AFBC1BE20BD4009C9594 /* Glists.m in Sources */ = {isa = PBXBuildFile; fileRef = 4440AFBB1BE20BD4009C9594 /* Glists.m */; };
-		4440AFC01BE219DE009C9594 /* binaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4440AFBF1BE219DE009C9594 /* binaryTreeNode.m */; };
-		4440AFC31BE22D05009C9594 /* binaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4440AFC21BE22D05009C9594 /* binaryTree.m */; };
-		448C5D341BFF229B00D9E1C0 /* AdGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 448C5D331BFF229B00D9E1C0 /* AdGraph.m */; };
-		448C5D371BFF233100D9E1C0 /* AdGraphVNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 448C5D361BFF233100D9E1C0 /* AdGraphVNode.m */; };
-		448C5D3A1BFF23BB00D9E1C0 /* AdGraphArcNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 448C5D391BFF23BB00D9E1C0 /* AdGraphArcNode.m */; };
-		44A60BB91BED0DE300A1CDD4 /* treeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A60BB81BED0DE300A1CDD4 /* treeNode.m */; };
-		44A60BBC1BED0F4600A1CDD4 /* tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A60BBB1BED0F4600A1CDD4 /* tree.m */; };
-		44E0FCCF1BF4742900B2DCA1 /* OLGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E0FCCE1BF4742900B2DCA1 /* OLGraph.m */; };
-		44E0FCDA1BF5D14B00B2DCA1 /* OLGraphArcNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E0FCD91BF5D14B00B2DCA1 /* OLGraphArcNode.m */; };
-		44E0FCDD1BF5D15900B2DCA1 /* OLGraphVNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E0FCDC1BF5D15900B2DCA1 /* OLGraphVNode.m */; };
+		443398271E11F1940026FA59 /* DoubleLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398211E11F1940026FA59 /* DoubleLinkList.m */; };
+		443398281E11F1940026FA59 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398231E11F1940026FA59 /* List.m */; };
+		443398291E11F1940026FA59 /* ListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398251E11F1940026FA59 /* ListNode.m */; };
+		4433982C1E11F1BB0026FA59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4433982B1E11F1BB0026FA59 /* main.m */; };
+		4433984D1E11F3250026FA59 /* AdGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 4433982F1E11F3250026FA59 /* AdGraph.m */; };
+		4433984E1E11F3250026FA59 /* AdGraphArcNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398311E11F3250026FA59 /* AdGraphArcNode.m */; };
+		4433984F1E11F3250026FA59 /* AdGraphVNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398331E11F3250026FA59 /* AdGraphVNode.m */; };
+		443398521E11F3250026FA59 /* OLGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398391E11F3250026FA59 /* OLGraph.m */; };
+		443398531E11F3250026FA59 /* OLGraphArcNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4433983B1E11F3250026FA59 /* OLGraphArcNode.m */; };
+		443398541E11F3250026FA59 /* OLGraphVNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4433983D1E11F3250026FA59 /* OLGraphVNode.m */; };
+		443398551E11F3250026FA59 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398401E11F3250026FA59 /* Queue.m */; };
+		443398561E11F3250026FA59 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398431E11F3250026FA59 /* Stack.m */; };
+		443398571E11F3250026FA59 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398461E11F3250026FA59 /* BinaryTree.m */; };
+		443398581E11F3250026FA59 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 443398481E11F3250026FA59 /* BinaryTreeNode.m */; };
+		443398591E11F3250026FA59 /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4433984A1E11F3250026FA59 /* Tree.m */; };
+		4433985A1E11F3250026FA59 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4433984C1E11F3250026FA59 /* TreeNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,42 +38,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4418DF7D1BDE11770047A02A /* doubleLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doubleLinkList.h; sourceTree = "<group>"; };
-		4418DF7E1BDE11770047A02A /* doubleLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = doubleLinkList.m; sourceTree = "<group>"; };
-		4418DF841BDE24390047A02A /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
-		4418DF851BDE24390047A02A /* stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stack.m; sourceTree = "<group>"; };
-		4418DF881BDF609C0047A02A /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
-		4418DF891BDF609C0047A02A /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		441E3AFD1BD79FDE004CEC19 /* LSQTG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LSQTG; sourceTree = BUILT_PRODUCTS_DIR; };
-		441E3B001BD79FDE004CEC19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = List/main.m; sourceTree = "<group>"; };
-		441E3B071BD7A05A004CEC19 /* listNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listNode.h; sourceTree = "<group>"; };
-		441E3B081BD7A05A004CEC19 /* listNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listNode.m; sourceTree = "<group>"; };
-		441E3B0A1BD8D8A6004CEC19 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
-		441E3B0B1BD8D8A6004CEC19 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
-		4440AFB71BE0F808009C9594 /* GlistNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlistNode.h; sourceTree = "<group>"; };
-		4440AFB81BE0F808009C9594 /* GlistNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlistNode.m; sourceTree = "<group>"; };
-		4440AFBA1BE20BD4009C9594 /* Glists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Glists.h; sourceTree = "<group>"; };
-		4440AFBB1BE20BD4009C9594 /* Glists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Glists.m; sourceTree = "<group>"; };
-		4440AFBE1BE219DE009C9594 /* binaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binaryTreeNode.h; sourceTree = "<group>"; };
-		4440AFBF1BE219DE009C9594 /* binaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = binaryTreeNode.m; sourceTree = "<group>"; };
-		4440AFC11BE22D05009C9594 /* binaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binaryTree.h; sourceTree = "<group>"; };
-		4440AFC21BE22D05009C9594 /* binaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = binaryTree.m; sourceTree = "<group>"; };
-		448C5D321BFF229B00D9E1C0 /* AdGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdGraph.h; sourceTree = "<group>"; };
-		448C5D331BFF229B00D9E1C0 /* AdGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdGraph.m; sourceTree = "<group>"; };
-		448C5D351BFF233100D9E1C0 /* AdGraphVNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdGraphVNode.h; sourceTree = "<group>"; };
-		448C5D361BFF233100D9E1C0 /* AdGraphVNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdGraphVNode.m; sourceTree = "<group>"; };
-		448C5D381BFF23BB00D9E1C0 /* AdGraphArcNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdGraphArcNode.h; sourceTree = "<group>"; };
-		448C5D391BFF23BB00D9E1C0 /* AdGraphArcNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdGraphArcNode.m; sourceTree = "<group>"; };
-		44A60BB71BED0DE300A1CDD4 /* treeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = treeNode.h; sourceTree = "<group>"; };
-		44A60BB81BED0DE300A1CDD4 /* treeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = treeNode.m; sourceTree = "<group>"; };
-		44A60BBA1BED0F4600A1CDD4 /* tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tree.h; sourceTree = "<group>"; };
-		44A60BBB1BED0F4600A1CDD4 /* tree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tree.m; sourceTree = "<group>"; };
-		44E0FCCD1BF4742900B2DCA1 /* OLGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLGraph.h; sourceTree = "<group>"; };
-		44E0FCCE1BF4742900B2DCA1 /* OLGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLGraph.m; sourceTree = "<group>"; };
-		44E0FCD81BF5D14B00B2DCA1 /* OLGraphArcNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLGraphArcNode.h; sourceTree = "<group>"; };
-		44E0FCD91BF5D14B00B2DCA1 /* OLGraphArcNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLGraphArcNode.m; sourceTree = "<group>"; };
-		44E0FCDB1BF5D15900B2DCA1 /* OLGraphVNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLGraphVNode.h; sourceTree = "<group>"; };
-		44E0FCDC1BF5D15900B2DCA1 /* OLGraphVNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLGraphVNode.m; sourceTree = "<group>"; };
+		443398201E11F1940026FA59 /* DoubleLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleLinkList.h; sourceTree = "<group>"; };
+		443398211E11F1940026FA59 /* DoubleLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleLinkList.m; sourceTree = "<group>"; };
+		443398221E11F1940026FA59 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		443398231E11F1940026FA59 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		443398241E11F1940026FA59 /* ListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		443398251E11F1940026FA59 /* ListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
+		4433982B1E11F1BB0026FA59 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4433982E1E11F3250026FA59 /* AdGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdGraph.h; sourceTree = "<group>"; };
+		4433982F1E11F3250026FA59 /* AdGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdGraph.m; sourceTree = "<group>"; };
+		443398301E11F3250026FA59 /* AdGraphArcNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdGraphArcNode.h; sourceTree = "<group>"; };
+		443398311E11F3250026FA59 /* AdGraphArcNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdGraphArcNode.m; sourceTree = "<group>"; };
+		443398321E11F3250026FA59 /* AdGraphVNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdGraphVNode.h; sourceTree = "<group>"; };
+		443398331E11F3250026FA59 /* AdGraphVNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdGraphVNode.m; sourceTree = "<group>"; };
+		443398381E11F3250026FA59 /* OLGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLGraph.h; sourceTree = "<group>"; };
+		443398391E11F3250026FA59 /* OLGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLGraph.m; sourceTree = "<group>"; };
+		4433983A1E11F3250026FA59 /* OLGraphArcNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLGraphArcNode.h; sourceTree = "<group>"; };
+		4433983B1E11F3250026FA59 /* OLGraphArcNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLGraphArcNode.m; sourceTree = "<group>"; };
+		4433983C1E11F3250026FA59 /* OLGraphVNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLGraphVNode.h; sourceTree = "<group>"; };
+		4433983D1E11F3250026FA59 /* OLGraphVNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLGraphVNode.m; sourceTree = "<group>"; };
+		4433983F1E11F3250026FA59 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		443398401E11F3250026FA59 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		443398421E11F3250026FA59 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		443398431E11F3250026FA59 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		443398451E11F3250026FA59 /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		443398461E11F3250026FA59 /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
+		443398471E11F3250026FA59 /* BinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
+		443398481E11F3250026FA59 /* BinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
+		443398491E11F3250026FA59 /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		4433984A1E11F3250026FA59 /* Tree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tree.m; sourceTree = "<group>"; };
+		4433984B1E11F3250026FA59 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
+		4433984C1E11F3250026FA59 /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
+		44B634891E12452C002C28AC /* ViDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViDataStructures.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,46 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4418DF831BDE21250047A02A /* Stack */ = {
-			isa = PBXGroup;
-			children = (
-				4418DF841BDE24390047A02A /* stack.h */,
-				4418DF851BDE24390047A02A /* stack.m */,
-			);
-			name = Stack;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		4418DF871BDF60330047A02A /* Queue */ = {
-			isa = PBXGroup;
-			children = (
-				4418DF881BDF609C0047A02A /* Queue.h */,
-				4418DF891BDF609C0047A02A /* Queue.m */,
-			);
-			name = Queue;
-			sourceTree = "<group>";
-		};
-		4418DF8C1BDFC7610047A02A /* Glists */ = {
-			isa = PBXGroup;
-			children = (
-				4440AFB71BE0F808009C9594 /* GlistNode.h */,
-				4440AFB81BE0F808009C9594 /* GlistNode.m */,
-				4440AFBA1BE20BD4009C9594 /* Glists.h */,
-				4440AFBB1BE20BD4009C9594 /* Glists.m */,
-			);
-			name = Glists;
-			sourceTree = "<group>";
-		};
 		441E3AF41BD79FDE004CEC19 = {
 			isa = PBXGroup;
 			children = (
+				44B634891E12452C002C28AC /* ViDataStructures.h */,
+				4433982D1E11F3250026FA59 /* Graph */,
+				4433983E1E11F3250026FA59 /* Queue */,
+				443398411E11F3250026FA59 /* Stack */,
+				443398441E11F3250026FA59 /* Tree */,
+				4433982B1E11F1BB0026FA59 /* main.m */,
+				4433981F1E11F1940026FA59 /* LinkList */,
 				44E0FCDE1BF62B0A00B2DCA1 /* test */,
-				44E0FCCC1BF4740000B2DCA1 /* Graph */,
-				441E3AFF1BD79FDE004CEC19 /* List */,
 				441E3AFE1BD79FDE004CEC19 /* Products */,
-				4418DF8C1BDFC7610047A02A /* Glists */,
-				4440AFBD1BE218A0009C9594 /* Tree */,
-				4418DF871BDF60330047A02A /* Queue */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,58 +107,74 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		441E3AFF1BD79FDE004CEC19 /* List */ = {
+		4433981F1E11F1940026FA59 /* LinkList */ = {
 			isa = PBXGroup;
 			children = (
-				441E3B071BD7A05A004CEC19 /* listNode.h */,
-				441E3B081BD7A05A004CEC19 /* listNode.m */,
-				441E3B0A1BD8D8A6004CEC19 /* List.h */,
-				441E3B0B1BD8D8A6004CEC19 /* List.m */,
-				4418DF7D1BDE11770047A02A /* doubleLinkList.h */,
-				4418DF7E1BDE11770047A02A /* doubleLinkList.m */,
-				4418DF831BDE21250047A02A /* Stack */,
+				443398201E11F1940026FA59 /* DoubleLinkList.h */,
+				443398211E11F1940026FA59 /* DoubleLinkList.m */,
+				443398221E11F1940026FA59 /* List.h */,
+				443398231E11F1940026FA59 /* List.m */,
+				443398241E11F1940026FA59 /* ListNode.h */,
+				443398251E11F1940026FA59 /* ListNode.m */,
 			);
-			path = List;
+			path = LinkList;
 			sourceTree = "<group>";
 		};
-		4440AFBD1BE218A0009C9594 /* Tree */ = {
+		4433982D1E11F3250026FA59 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				4440AFC11BE22D05009C9594 /* binaryTree.h */,
-				4440AFC21BE22D05009C9594 /* binaryTree.m */,
-				4440AFBE1BE219DE009C9594 /* binaryTreeNode.h */,
-				4440AFBF1BE219DE009C9594 /* binaryTreeNode.m */,
-				44A60BB71BED0DE300A1CDD4 /* treeNode.h */,
-				44A60BB81BED0DE300A1CDD4 /* treeNode.m */,
-				44A60BBA1BED0F4600A1CDD4 /* tree.h */,
-				44A60BBB1BED0F4600A1CDD4 /* tree.m */,
+				4433982E1E11F3250026FA59 /* AdGraph.h */,
+				4433982F1E11F3250026FA59 /* AdGraph.m */,
+				443398301E11F3250026FA59 /* AdGraphArcNode.h */,
+				443398311E11F3250026FA59 /* AdGraphArcNode.m */,
+				443398321E11F3250026FA59 /* AdGraphVNode.h */,
+				443398331E11F3250026FA59 /* AdGraphVNode.m */,
+				443398381E11F3250026FA59 /* OLGraph.h */,
+				443398391E11F3250026FA59 /* OLGraph.m */,
+				4433983A1E11F3250026FA59 /* OLGraphArcNode.h */,
+				4433983B1E11F3250026FA59 /* OLGraphArcNode.m */,
+				4433983C1E11F3250026FA59 /* OLGraphVNode.h */,
+				4433983D1E11F3250026FA59 /* OLGraphVNode.m */,
 			);
-			name = Tree;
+			path = Graph;
 			sourceTree = "<group>";
 		};
-		44E0FCCC1BF4740000B2DCA1 /* Graph */ = {
+		4433983E1E11F3250026FA59 /* Queue */ = {
 			isa = PBXGroup;
 			children = (
-				44E0FCCD1BF4742900B2DCA1 /* OLGraph.h */,
-				44E0FCCE1BF4742900B2DCA1 /* OLGraph.m */,
-				44E0FCD81BF5D14B00B2DCA1 /* OLGraphArcNode.h */,
-				44E0FCD91BF5D14B00B2DCA1 /* OLGraphArcNode.m */,
-				44E0FCDB1BF5D15900B2DCA1 /* OLGraphVNode.h */,
-				44E0FCDC1BF5D15900B2DCA1 /* OLGraphVNode.m */,
-				448C5D321BFF229B00D9E1C0 /* AdGraph.h */,
-				448C5D331BFF229B00D9E1C0 /* AdGraph.m */,
-				448C5D351BFF233100D9E1C0 /* AdGraphVNode.h */,
-				448C5D361BFF233100D9E1C0 /* AdGraphVNode.m */,
-				448C5D381BFF23BB00D9E1C0 /* AdGraphArcNode.h */,
-				448C5D391BFF23BB00D9E1C0 /* AdGraphArcNode.m */,
+				4433983F1E11F3250026FA59 /* Queue.h */,
+				443398401E11F3250026FA59 /* Queue.m */,
 			);
-			name = Graph;
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		443398411E11F3250026FA59 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				443398421E11F3250026FA59 /* Stack.h */,
+				443398431E11F3250026FA59 /* Stack.m */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		443398441E11F3250026FA59 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				443398451E11F3250026FA59 /* BinaryTree.h */,
+				443398461E11F3250026FA59 /* BinaryTree.m */,
+				443398471E11F3250026FA59 /* BinaryTreeNode.h */,
+				443398481E11F3250026FA59 /* BinaryTreeNode.m */,
+				443398491E11F3250026FA59 /* Tree.h */,
+				4433984A1E11F3250026FA59 /* Tree.m */,
+				4433984B1E11F3250026FA59 /* TreeNode.h */,
+				4433984C1E11F3250026FA59 /* TreeNode.m */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 		44E0FCDE1BF62B0A00B2DCA1 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				441E3B001BD79FDE004CEC19 /* main.m */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -252,24 +235,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E0FCDD1BF5D15900B2DCA1 /* OLGraphVNode.m in Sources */,
-				44E0FCCF1BF4742900B2DCA1 /* OLGraph.m in Sources */,
-				4440AFC31BE22D05009C9594 /* binaryTree.m in Sources */,
-				448C5D371BFF233100D9E1C0 /* AdGraphVNode.m in Sources */,
-				448C5D3A1BFF23BB00D9E1C0 /* AdGraphArcNode.m in Sources */,
-				4440AFB91BE0F808009C9594 /* GlistNode.m in Sources */,
-				4440AFBC1BE20BD4009C9594 /* Glists.m in Sources */,
-				4418DF861BDE24390047A02A /* stack.m in Sources */,
-				4418DF7F1BDE11770047A02A /* doubleLinkList.m in Sources */,
-				44A60BBC1BED0F4600A1CDD4 /* tree.m in Sources */,
-				441E3B0C1BD8D8A6004CEC19 /* List.m in Sources */,
-				44E0FCDA1BF5D14B00B2DCA1 /* OLGraphArcNode.m in Sources */,
-				4418DF8A1BDF609C0047A02A /* Queue.m in Sources */,
-				448C5D341BFF229B00D9E1C0 /* AdGraph.m in Sources */,
-				441E3B011BD79FDE004CEC19 /* main.m in Sources */,
-				441E3B091BD7A05A004CEC19 /* listNode.m in Sources */,
-				4440AFC01BE219DE009C9594 /* binaryTreeNode.m in Sources */,
-				44A60BB91BED0DE300A1CDD4 /* treeNode.m in Sources */,
+				443398291E11F1940026FA59 /* ListNode.m in Sources */,
+				4433985A1E11F3250026FA59 /* TreeNode.m in Sources */,
+				443398271E11F1940026FA59 /* DoubleLinkList.m in Sources */,
+				4433984F1E11F3250026FA59 /* AdGraphVNode.m in Sources */,
+				443398591E11F3250026FA59 /* Tree.m in Sources */,
+				443398521E11F3250026FA59 /* OLGraph.m in Sources */,
+				4433984D1E11F3250026FA59 /* AdGraph.m in Sources */,
+				443398581E11F3250026FA59 /* BinaryTreeNode.m in Sources */,
+				443398561E11F3250026FA59 /* Stack.m in Sources */,
+				443398541E11F3250026FA59 /* OLGraphVNode.m in Sources */,
+				443398551E11F3250026FA59 /* Queue.m in Sources */,
+				4433982C1E11F1BB0026FA59 /* main.m in Sources */,
+				443398571E11F3250026FA59 /* BinaryTree.m in Sources */,
+				4433984E1E11F3250026FA59 /* AdGraphArcNode.m in Sources */,
+				443398281E11F1940026FA59 /* List.m in Sources */,
+				443398531E11F3250026FA59 /* OLGraphArcNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

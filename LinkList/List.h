@@ -6,26 +6,14 @@
 //  Copyright © 2015年 Vincent_D. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "listNode.h"
+#import "ListNode.h"
 
-@class listNode;
-
-//@protocol listDelegate <NSObject>
-
-//@property (nonatomic, weak) id listDelegate;
-
-
-//- (void)visit:(listNode *)currentNote atIndex:(NSInteger)index;
-//
-//@end
-
-//typedef void(^visitBlock)(listNode *currentNode);
+@class ListNode;
 
 @interface List : NSObject  
 
-@property (nonatomic) listNode *head;
+@property (nonatomic) ListNode *head;
 @property (nonatomic) NSInteger length;
-//@property (nonatomic,weak) id listDelegate;
 
 - (NSInteger)length;                                     //长度get方法
 
@@ -45,9 +33,7 @@
 - (void)mergeSort;
 - (void)sortWithComparisonBlock:(NSComparisonResult(^)(id _Nonnull obj1, id _Nonnull obj2))cmptr;
 
-
-//- (void)travelList;
-- (void)travelList:(nullable void(^)(listNode* currentNode, NSInteger index))visitBlock;
+- (void)travelList:(nullable void(^)(ListNode* currentNode, NSInteger index))visitBlock;
 
 
 @end

@@ -13,8 +13,6 @@
 
 @interface OLGraph ()
 
-
-
 @end
 
 @implementation OLGraph
@@ -267,7 +265,7 @@
             visitBlock(self.VNodes[i]);
             [queue enQueue:self.VNodes[i]];
         }
-        while ((currentVNode = [queue DeQueue])) {
+        while ((currentVNode = [queue deQueue])) {
             for (OLGraphArcNode *nextArcNode = currentVNode.firstOutArc; nextArcNode; nextArcNode = nextArcNode.sameTailArc) {
                 NSInteger index = [self.VNodes indexOfObject:nextArcNode.tailVNode];
                 if (!visited[index]) {

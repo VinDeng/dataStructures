@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "List.h"
 
-@interface stack : NSObject
+@interface Stack : NSObject
 
 
 @property (nonatomic) NSInteger length;
@@ -17,18 +17,17 @@
 
 - (instancetype)initWithArray:(NSArray *)array; //以数组构造
 
-//要重写的get方法
-- (id)top;
-- (NSInteger) length;
+- (id)top;//栈顶元素
+- (NSInteger)length; //栈长
 
-//- (void)destoryStack;
 - (void)clearStack;  //清栈
 - (void)push:(id)object; //进栈
 - (id)pop;//出栈
 
 - (BOOL)isEmpty;
 
-- (void)travelStack:(nullable void(^)(id currentObject))visitBlock;
+//遍历方法
+- (void)travelStack:(void(^)(id currentObject))visitBlock;
 
 
 

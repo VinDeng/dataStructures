@@ -13,8 +13,8 @@
 @interface Queue ()
 
 @property (nonatomic) List * list;
-@property (nonatomic, weak)listNode *front;
-@property (nonatomic, weak)listNode *rear;
+@property (nonatomic, weak)ListNode *front;
+@property (nonatomic, weak)ListNode *rear;
 
 @property (nonatomic) NSInteger maximumLength;
 
@@ -69,7 +69,7 @@
         }
 }
 
-- (id)DeQueue
+- (id)deQueue
 {
 
     if (self.front == self.list.head) { //空队列
@@ -100,7 +100,7 @@
 - (void)travelQueue:(void (^)(id))visitBlock
 {
     if (visitBlock) {
-        [self.list travelList:^(listNode *currentNode, NSInteger index) {
+        [self.list travelList:^(ListNode *currentNode, NSInteger index) {
             visitBlock(currentNode.Object);
         }];
     }

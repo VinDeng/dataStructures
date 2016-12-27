@@ -21,7 +21,7 @@
 
 - (id)Head;        //查看队头元素
 - (void)enQueue:(id)object; //元素入队，超过最大量则入溢出区
-- (id)DeQueue;            //元素出队
+- (id)deQueue;            //元素出队
 
 - (void)travelQueue:(void (^)(id object))visitBlock;
 

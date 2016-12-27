@@ -122,7 +122,7 @@
             startingLineNumber = "286"
             endingLineNumber = "286"
             landmarkName = "-postOrderTraverseWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,7 +138,7 @@
             startingLineNumber = "289"
             endingLineNumber = "289"
             landmarkName = "-postOrderTraverseWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -154,7 +154,7 @@
             startingLineNumber = "422"
             endingLineNumber = "422"
             landmarkName = "-postOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,7 +170,7 @@
             startingLineNumber = "279"
             endingLineNumber = "279"
             landmarkName = "-inOrderTraverseThreadTreeWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,7 +186,7 @@
             startingLineNumber = "439"
             endingLineNumber = "439"
             landmarkName = "-postOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -202,7 +202,7 @@
             startingLineNumber = "438"
             endingLineNumber = "438"
             landmarkName = "-postOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -250,7 +250,7 @@
             startingLineNumber = "295"
             endingLineNumber = "295"
             landmarkName = "-postOrderTraverseWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -298,7 +298,7 @@
             startingLineNumber = "401"
             endingLineNumber = "401"
             landmarkName = "-inOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -314,7 +314,7 @@
             startingLineNumber = "402"
             endingLineNumber = "402"
             landmarkName = "-inOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -330,7 +330,7 @@
             startingLineNumber = "216"
             endingLineNumber = "216"
             landmarkName = "-preOrderTraverseThreadTreeWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -346,7 +346,7 @@
             startingLineNumber = "400"
             endingLineNumber = "400"
             landmarkName = "-inOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -394,7 +394,7 @@
             startingLineNumber = "224"
             endingLineNumber = "224"
             landmarkName = "-preOrderTraverseThreadTreeWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -410,7 +410,7 @@
             startingLineNumber = "220"
             endingLineNumber = "220"
             landmarkName = "-preOrderTraverseThreadTreeWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -442,7 +442,7 @@
             startingLineNumber = "415"
             endingLineNumber = "415"
             landmarkName = "-postOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -458,7 +458,7 @@
             startingLineNumber = "240"
             endingLineNumber = "240"
             landmarkName = "-inOrderTraverseWithBlock:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -474,7 +474,7 @@
             startingLineNumber = "416"
             endingLineNumber = "416"
             landmarkName = "-postOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -490,7 +490,7 @@
             startingLineNumber = "364"
             endingLineNumber = "364"
             landmarkName = "-preOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -506,7 +506,7 @@
             startingLineNumber = "491"
             endingLineNumber = "491"
             landmarkName = "-unthreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -522,7 +522,7 @@
             startingLineNumber = "493"
             endingLineNumber = "493"
             landmarkName = "-unthreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -538,7 +538,7 @@
             startingLineNumber = "356"
             endingLineNumber = "356"
             landmarkName = "-preOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -554,7 +554,7 @@
             startingLineNumber = "484"
             endingLineNumber = "484"
             landmarkName = "-unthreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -570,7 +570,7 @@
             startingLineNumber = "379"
             endingLineNumber = "379"
             landmarkName = "-inOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -586,7 +586,7 @@
             startingLineNumber = "365"
             endingLineNumber = "365"
             landmarkName = "-preOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -602,7 +602,7 @@
             startingLineNumber = "505"
             endingLineNumber = "505"
             landmarkName = "-unthreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -618,7 +618,7 @@
             startingLineNumber = "460"
             endingLineNumber = "460"
             landmarkName = "-unthreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -634,7 +634,7 @@
             startingLineNumber = "337"
             endingLineNumber = "337"
             landmarkName = "-preOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -650,7 +650,7 @@
             startingLineNumber = "359"
             endingLineNumber = "359"
             landmarkName = "-preOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -666,7 +666,7 @@
             startingLineNumber = "366"
             endingLineNumber = "366"
             landmarkName = "-preOrderThreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -682,7 +682,7 @@
             startingLineNumber = "495"
             endingLineNumber = "495"
             landmarkName = "-unthreading"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -744,7 +744,7 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "+treeWithArray:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -760,7 +760,7 @@
             startingLineNumber = "64"
             endingLineNumber = "64"
             landmarkName = "-preOrderCreatTreeAtNode:withArray:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -776,7 +776,7 @@
             startingLineNumber = "170"
             endingLineNumber = "170"
             landmarkName = "-insertValueByFullBinaryTreeMode:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -792,7 +792,7 @@
             startingLineNumber = "125"
             endingLineNumber = "125"
             landmarkName = "-preOrderCreatTreeAtNode:WithPreSequence:andInSequence:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -808,7 +808,7 @@
             startingLineNumber = "151"
             endingLineNumber = "151"
             landmarkName = "-depth"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1182,7 +1182,7 @@
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "main()"
-            landmarkType = "7">
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1198,7 +1198,7 @@
             startingLineNumber = "110"
             endingLineNumber = "110"
             landmarkName = "main()"
-            landmarkType = "7">
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1214,7 +1214,7 @@
             startingLineNumber = "94"
             endingLineNumber = "94"
             landmarkName = "main()"
-            landmarkType = "7">
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1230,7 +1230,39 @@
             startingLineNumber = "214"
             endingLineNumber = "214"
             landmarkName = "main()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tree/BinaryTree.m"
+            timestampString = "504507316.114326"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
+            landmarkName = "-postOrderTraverseWithBlock:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "main.m"
+            timestampString = "504513925.558014"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "main()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

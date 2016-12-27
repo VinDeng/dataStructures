@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "binaryTreeNode.h"
-#import "stack.h"
+#import "BinaryTreeNode.h"
+#import "Stack.h"
 
-@interface binaryTree : NSObject
+@interface BinaryTree : NSObject
 
-@property (nonatomic) binaryTreeNode * root;
+@property (nonatomic) BinaryTreeNode * root;
 
 @property (nonatomic) NSInteger depth;
 
@@ -22,10 +22,11 @@
 + (instancetype)treeWithPreSequence:(NSArray *)preSequence andInSequence:(NSArray *)inSequence;
 
 
-- (void)preOrderTraverseWithBlock:(void (^)(binaryTreeNode * currentNode))visitBlock;//先序，下面分别为中序和后序
-- (void)inOrderTraverseWithBlock:(void(^)(binaryTreeNode *currentNode))visitBlock;
+- (void)preOrderTraverseWithBlock:(void (^)(BinaryTreeNode
+                                            * currentNode))visitBlock;//先序，下面分别为中序和后序
+- (void)inOrderTraverseWithBlock:(void(^)(BinaryTreeNode *currentNode))visitBlock;
 
-- (void)postOrderTraverseWithBlock:(void(^)(binaryTreeNode *currentNode))visitBlock;
+- (void)postOrderTraverseWithBlock:(void(^)(BinaryTreeNode *currentNode))visitBlock;
 
 #pragma mark-
 #pragma mark线索化方法

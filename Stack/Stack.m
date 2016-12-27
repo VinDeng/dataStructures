@@ -6,15 +6,15 @@
 //  Copyright © 2015年 Vincent_D. All rights reserved.
 //
 
-#import "stack.h"
+#import "Stack.h"
 
-@interface stack ()
+@interface Stack ()
 
 @property (nonatomic) List* list;
 
 @end
 
-@implementation stack
+@implementation Stack
 
 - (instancetype)init
 {
@@ -83,14 +83,9 @@
 
 - (void)travelStack:(void (^)(id))visitBlock
 {
- [self.list travelList:^(listNode *currentNote, NSInteger index) {
+ [self.list travelList:^(ListNode *currentNote, NSInteger index) {
      visitBlock(currentNote.Object);
  }];
 }
-//
-//- (void)dealloc
-//{
-//    NSLog(@"stack dealloc");
-//}
 
 @end

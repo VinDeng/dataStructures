@@ -203,7 +203,7 @@
             visitBlock(self.VNodes[i]);
             [queue enQueue:self.VNodes[i]];
         }
-        while ((currentVNode = [queue DeQueue])) {
+        while ((currentVNode = [queue deQueue])) {
             for (AdGraphArcNode *arc = currentVNode.firstArcNode; arc; arc = arc.nextArcNode) {
                 NSInteger index = [self.VNodes indexOfObject:arc.adVNode];
                 if (!visited[index]) {

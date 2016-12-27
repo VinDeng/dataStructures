@@ -10,7 +10,7 @@
 #import "OLGraphArcNode.h"
 #import "OLGraphVNode.h"
 
-@interface OLGraph : NSObject
+@interface OLGraph: NSObject
 
 @property (nonatomic) NSInteger vexNum;
 @property (nonatomic) NSInteger arcNum;

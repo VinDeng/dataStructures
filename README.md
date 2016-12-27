@@ -33,7 +33,7 @@
         - (void)travelList:(nullable void(^)(listNode* currentNode, NSInteger index))visitBlock;
         //在传入的visitBlock中对遍历元素进行操作
 
-二、stack 栈
+二、Stack 栈
 
 基本属性：1.length属性，动态查询堆栈长度
         2.top属性，返回栈顶元素，不出栈
@@ -55,7 +55,7 @@
         3.遍历方法  
         - (void)travelStack:(nullable void(^)(id currentObject))visitBlock;  //遍历栈中元素，再visitBlock中进行修改
 
-三、queue 队列
+三、Queue 队列
 
 基本属性：
         1.length属性 动态查询队列长度
@@ -73,13 +73,13 @@
         - (void)clearQueue //清空队列 
         - (id)Head;        //返回队头元素
         - (void)enQueue:(id)object; //元素入队，超过最大量则入溢出区
-        - (id)DeQueue;            //元素出队，返回队头元素
+        - (id)deQueue;            //元素出队，返回队头元素
 
         
         3.遍历方法  
         - (void)travelStack:(nullable void(^)(id currentObject))visitBlock;  //遍历栈中元素，再visitBlock中进行修改
 
-四、binaryTree 二叉树
+四、BinaryTree 二叉树
 
 基本属性：
 
@@ -122,7 +122,7 @@
         - (void)postOrderThreading //后序线索化
         - (void)unthreading;//去线索化
 
-        //线索化后，此二叉树的便利方法不再使用栈，可以节约空间资源
+        //线索化后，此二叉树的遍历方法不再使用栈，可以节约空间资源
 
 
 五、AdGraph 邻接表图
@@ -171,57 +171,4 @@
         //广度优先
 
         - (void)DFSWithBlock:(void (^)(AdGraphVNode *currentNode))visitBlock;
-        //深度优先
-
-六、OLGraph 十字邻接表图 //比起邻接表图，占用空间更大，但是对顶点与弧的操作更快
-
-基本属性 
-        1.vexNum属性，表示顶点的数目
-        2.arcNum属性，表示弧的数目
-        3.VNodes属性，存放顶点的一个数组
-
-结点结构：
-
-一、顶点结点:
-        1.id value: 此顶点存放的值
-        2.OLGraphArcNode *firstInArcNode //此顶点指向的第一根入弧
-        3.OLGraphArcNode *firstOutArcNode //此顶点指向的第一根出弧
-
-        +（instancetype)VNodeWithValue:(id)value  //返回一个带有value值的顶点
-
-二、弧结点:
-        1.OLGraphArcNode *sameHeadArc //与此弧起点相同的下一条弧
-        2.OLGraphArcNode *sameTailArc //与此弧重点相同的下一条弧
-        3.OLGraphVNode *headVNode //此弧的头结点
-        4.OLGraphVNode *tailVNode //此弧的尾结点
-        5.id info;  //此弧携带的信息
-
-        + (instancetype)arcWithImformation:(NSDictionary*)dic //返回一条制定了头尾与信息的弧线
-
-方法说明：
-
-        1.构造方法
-        + (instancetype)creatOLGraphWithNodeValue:(NSArray *)value andArc:(NSArray *)arc
-        //返回一个通过顶点结点内的元素以及顶点之间的指向关系构造图，其中value数组内部直接存放目标对象，arc数组内则存放对象以tail,head,info为key的字典对象，具体的使用例子可以参考测试代码。
-
-        2.弧操作:- (void)addArcWithImformation:(NSDictionary *)dic;
-        //构造一条弧
-        - (void)removeArc:(OLGraphArcNode *)arc;
-        //删除一条已知的弧
-        - (void)removeAllArcBetweenVNodeA:(OLGraphVNode *)VNodeA andVNodeB:(OLGraphVNode *)VNodeB
-        //删除两点之间所有弧
-        - (void)removeAllArcFromVNodeA:(OLGraphVNode *)VNodeA toVNodeB:(OLGraphVNode *)VNodeB;
-        //删除从点A指向点B的所有弧
-        - (void)removeArcBetweenVNodeA:(OLGraphVNode *)VNodeA andVNodeB:(OLGraphVNode *)VNodeB WithInfo:(id)info;
-        //删除点A与点B之间信息为Info的全部弧
-        - (void)removeArcFromVNodeA:(OLGraphVNode *)VNodeA toVNodeB:(OLGraphVNode *)VNodeB WithInfo:(id)info;
-        //删除从点A指向点B并信息为Info的全部弧
-        - (void)removeVNode:(OLGraphVNode *)VNode;
-        //删除顶点并移除所有与此节点有关的弧
-
-        3.遍历:
-        - (void)BFSWithBlock:(void (^)(OLGraphVNode *currentNode))visitBlock;
-        //广度优先
-
-        - (void)DFSWithBlock:(void (^)(OLGraphVNode *currentNode))visitBlock;
         //深度优先

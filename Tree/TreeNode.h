@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "List.h"
 
-@interface treeNode : NSObject
+@interface TreeNode : NSObject
 
-@property (nonatomic) treeNode *parent;
+@property (nonatomic) TreeNode *parent;
 @property (nonatomic) id value;
 
-+ (instancetype)treeNodeWithValue:(id)value andParent:(treeNode *)Node;
++ (instancetype)treeNodeWithValue:(id)value andParent:(TreeNode *)Node;
 
 @end

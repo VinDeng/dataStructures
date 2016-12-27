@@ -6,28 +6,30 @@
 //  Copyright © 2015年 Vincent_D. All rights reserved.
 //
 
-#import "binaryTree.h"
+#import "BinaryTree.h"
 
 typedef enum : NSUInteger {
-    NoneThreaded,
-    preThreaded,
-    inOrderThreaded,
-    postOrderThreaded,
-} threadType;
+    NoneThreaded, //非序列化树
+    preThreaded, //先序序列化树
+    inOrderThreaded, //中序序列化树
+    postOrderThreaded, //后续序列化树
+} ThreadType;
 
-@interface binaryTree ()
+@interface BinaryTree ()
 
-@property (nonatomic) threadType threadType;
-@property (nonatomic) binaryTreeNode* threadTree;
+@property (nonatomic) ThreadType threadType;
+@property (nonatomic) BinaryTreeNode* threadTree;
+
 
 @end
 
-@implementation binaryTree
+@implementation BinaryTree
+
 
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.root = [binaryTreeNode treeNodeWithValue:nil andParent:nil];
+        self.root = [BinaryTreeNode treeNodeWithValue:nil andParent:nil];
         self.threadType = NoneThreaded;
         self.threadTree = nil;
     }
@@ -38,7 +40,7 @@ typedef enum : NSUInteger {
 {
     NSMutableArray *array = [[NSMutableArray alloc] initWithArray:arr];
     
-    binaryTree *tree = [[binaryTree alloc] init];
+    BinaryTree *tree = [[BinaryTree alloc] init];
     
     tree.root = [tree preOrderCreatTreeAtNode:tree.root withArray:array];
     
@@ -46,7 +48,7 @@ typedef enum : NSUInteger {
     
 }
 
-- (binaryTreeNode *)preOrderCreatTreeAtNode:(binaryTreeNode *)Node withArray:(NSMutableArray *)array
+- (BinaryTreeNode *)preOrderCreatTreeAtNode:(BinaryTreeNode *)Node withArray:(NSMutableArray *)array
 {
     if (!array.count )  {
         return nil;
@@ -57,7 +59,7 @@ typedef enum : NSUInteger {
         return nil;
     }
     
-    Node = [binaryTreeNode treeNodeWithValue:array.firstObject andParent:nil];
+    Node = [BinaryTreeNode treeNodeWithValue:array.firstObject andParent:nil];
 
     [array removeObject:array.firstObject];
 
@@ -89,14 +91,14 @@ typedef enum : NSUInteger {
         return nil;
     }
     
-    binaryTree *tree = [[binaryTree alloc] init];
+    BinaryTree *tree = [[BinaryTree alloc] init];
     
     tree.root = [tree preOrderCreatTreeAtNode:tree.root WithPreSequence:preSequence andInSequence:inSequence];
     
     return tree;
 }
 
-- (binaryTreeNode *)preOrderCreatTreeAtNode:(binaryTreeNode *)Node WithPreSequence:(NSArray *)preSequence andInSequence:(NSArray *)inSequence
+- (BinaryTreeNode *)preOrderCreatTreeAtNode:(BinaryTreeNode *)Node WithPreSequence:(NSArray *)preSequence andInSequence:(NSArray *)inSequence
 {
     if (!preSequence.count) {
         return nil;
@@ -133,7 +135,7 @@ typedef enum : NSUInteger {
         index ++;
     }
     
-    Node = [binaryTreeNode treeNodeWithValue:preSequence.firstObject andParent:nil];
+    Node = [BinaryTreeNode treeNodeWithValue:preSequence.firstObject andParent:nil];
     
     Node.leftChild = [self preOrderCreatTreeAtNode:Node.leftChild WithPreSequence:leftChildPreSequence andInSequence:leftChildInSequence];
     Node.rightChild = [self preOrderCreatTreeAtNode:Node.rightChild WithPreSequence:rightChildPreSequence andInSequence:rightChildInsequence];
@@ -153,7 +155,7 @@ typedef enum : NSUInteger {
     return [self depthOfNode:self.root];
 }
 
-- (NSInteger)depthOfNode:(binaryTreeNode *)node
+- (NSInteger)depthOfNode:(BinaryTreeNode *)node
 {
     if (!node) {
         return 0;
@@ -166,7 +168,7 @@ typedef enum : NSUInteger {
 
 - (void)insertValueByFullBinaryTreeMode:(id)value
 {
-    binaryTreeNode* currentNode = self.root;
+    BinaryTreeNode* currentNode = self.root;
     while (!currentNode) {
         if (!currentNode.leftChild) {
             
@@ -178,13 +180,13 @@ typedef enum : NSUInteger {
 #pragma mark-
 #pragma mark先序遍历方法，分为类方法与对象方法
 
-- (void)preOrderTraverseWithBlock:(void (^)(binaryTreeNode * currentNode))visitBlock
+- (void)preOrderTraverseWithBlock:(void (^)(BinaryTreeNode * currentNode))visitBlock
 {
-    binaryTreeNode *Node = self.root;
+    BinaryTreeNode *Node = self.root;
     [self preOrderTraverseBeginAtANode:Node WithBlock:visitBlock];
 }
 
-- (void)preOrderTraverseBeginAtANode:(nullable binaryTreeNode* )Node WithBlock:(void(^)(binaryTreeNode *currentNode))visitBlock;
+- (void)preOrderTraverseBeginAtANode:(BinaryTreeNode* )Node WithBlock:(void(^)(BinaryTreeNode *currentNode))visitBlock;
 {
     if (!Node) {
         return;
@@ -204,12 +206,12 @@ typedef enum : NSUInteger {
 }
 
 //线索二叉树
-- (void) preOrderTraverseThreadTreeWithBlock:(void (^)(binaryTreeNode * currentNode))visitBlock
+- (void)preOrderTraverseThreadTreeWithBlock:(void (^)(BinaryTreeNode * currentNode))visitBlock
 {
     if (!self.threadTree || (self.threadTree.leftChild == self.threadTree)) {
         return;
     }else{
-        binaryTreeNode *currentNode = self.threadTree.leftChild;
+        BinaryTreeNode *currentNode = self.threadTree.leftChild;
         while (currentNode != self.threadTree) {
             while (!currentNode.leftTag) {  //LINK为0，找到最左侧的节点
                 visitBlock(currentNode);
@@ -235,15 +237,15 @@ typedef enum : NSUInteger {
 #pragma mark-
 #pragma mark中序遍历方法
 
-- (void)inOrderTraverseWithBlock:(void (^)(binaryTreeNode * currentNode))visitBlock //非递归遍历
+- (void)inOrderTraverseWithBlock:(void (^)(BinaryTreeNode * currentNode))visitBlock //非递归遍历
 {
     if (self.threadType == inOrderThreaded) {
         [self inOrderTraverseThreadTreeWithBlock:visitBlock];
         return;
     }else{
     
-        stack * nodeStack = [[stack alloc] init];
-        binaryTreeNode *currentNode = self.root;
+        Stack * nodeStack = [[Stack alloc] init];
+        BinaryTreeNode *currentNode = self.root;
         
         while (![nodeStack isEmpty] || currentNode) {
             if (currentNode) {
@@ -259,12 +261,13 @@ typedef enum : NSUInteger {
 }
 
 //线索二叉树
-- (void) inOrderTraverseThreadTreeWithBlock:(void (^)(binaryTreeNode * currentNode))visitBlock
+- (void)inOrderTraverseThreadTreeWithBlock:(void (^)(BinaryTreeNode * currentNode))visitBlock
 {
     if (!self.threadTree || (self.threadTree.leftChild == self.threadTree) ) {
         return;
     }
-    binaryTreeNode *currentNode = self.threadTree.leftChild;
+    BinaryTreeNode
+    *currentNode = self.threadTree.leftChild;
     while (currentNode != self.threadTree) {
         while (!currentNode.leftTag) {      //LINK为0，找到最左侧的节点
             currentNode = currentNode.leftChild;
@@ -282,15 +285,15 @@ typedef enum : NSUInteger {
 #pragma mark-
 #pragma mark后序遍历方法
 
-- (void)postOrderTraverseWithBlock:(void (^)(binaryTreeNode * currentNode))visitBlock
+- (void)postOrderTraverseWithBlock:(void (^)(BinaryTreeNode * currentNode))visitBlock
 {
     if (self.threadType == postOrderThreaded) {
         [self postOrderTraverseThreadTreeWithBlock:visitBlock];
         return;
     }
     
-    stack * nodeStack = [[stack alloc] init];
-    binaryTreeNode *currentNode = self.root;
+    Stack * nodeStack = [[Stack alloc] init];
+    BinaryTreeNode *currentNode = self.root;
     
     while ( ![nodeStack isEmpty] || (currentNode) ) {
         if (currentNode) {
@@ -305,12 +308,12 @@ typedef enum : NSUInteger {
 }
 
 //线索二叉树
-- (void) postOrderTraverseThreadTreeWithBlock:(void (^)(binaryTreeNode * currentNode))visitBlock
+- (void) postOrderTraverseThreadTreeWithBlock:(void (^)(BinaryTreeNode * currentNode))visitBlock
 {
     if (!self.threadTree || (self.threadTree.leftChild == self.threadTree) ) {
         return;
     }
-    binaryTreeNode *currentNode = self.threadTree.leftChild;
+    BinaryTreeNode *currentNode = self.threadTree.leftChild;
     while (currentNode != self.threadTree ) {
         while (!currentNode.leftTag && (currentNode != self.root)) {//LINK为0，找到最左侧的节点
             currentNode = currentNode.leftChild;
@@ -334,18 +337,18 @@ typedef enum : NSUInteger {
 
 - (void)preOrderThreading
 {
-    binaryTreeNode *threadTree = [binaryTreeNode treeNodeWithValue:nil andParent:nil];
+    BinaryTreeNode *threadTree = [BinaryTreeNode treeNodeWithValue:nil andParent:nil];
     threadTree.leftTag = LINK;
     threadTree.rightTag = THREAD;
     threadTree.leftChild = self.root;
 
-    __block binaryTreeNode *preNode;
+    __block BinaryTreeNode *preNode;
     if (!self.root) {
         threadTree.rightChild = threadTree;
     }else{
         preNode = threadTree;
         
-        [self preOrderTraverseBeginAtANode:self.root WithBlock:^(binaryTreeNode *currentNode) {
+        [self preOrderTraverseBeginAtANode:self.root WithBlock:^(BinaryTreeNode *currentNode) {
             if (!currentNode.leftChild) {
                 currentNode.leftTag = THREAD;
                 currentNode.leftChild = preNode;
@@ -367,21 +370,21 @@ typedef enum : NSUInteger {
 
 - (void)inOrderThreading
 {
-    binaryTreeNode *threadTree = [binaryTreeNode treeNodeWithValue:nil andParent:nil];
+    BinaryTreeNode *threadTree = [BinaryTreeNode treeNodeWithValue:nil andParent:nil];
     threadTree.leftTag = LINK;
     threadTree.rightTag = THREAD;
 //    threadTree.rightChild = threadTree;
-   __block binaryTreeNode *preNode;
+   __block BinaryTreeNode *preNode;
     if (!self.root) {
         threadTree.leftChild = threadTree;
     }else{
-        binaryTreeNode *theFarLeftNode = self.root;
+        BinaryTreeNode *theFarLeftNode = self.root;
         while (theFarLeftNode.leftChild) {
             theFarLeftNode = theFarLeftNode.leftChild;
         }
         threadTree.leftChild = theFarLeftNode;
         preNode = threadTree;
-        [self inOrderTraverseWithBlock:^(binaryTreeNode *currentNode) {
+        [self inOrderTraverseWithBlock:^(BinaryTreeNode *currentNode) {
             if (!currentNode.leftChild) {
                 currentNode.leftTag = THREAD;
                 currentNode.leftChild = preNode;
@@ -403,24 +406,22 @@ typedef enum : NSUInteger {
 
 - (void)postOrderThreading
 {
-    binaryTreeNode *threadTree = [binaryTreeNode treeNodeWithValue:nil andParent:nil];
+    BinaryTreeNode *threadTree = [BinaryTreeNode treeNodeWithValue:nil andParent:nil];
     threadTree.leftTag = LINK;
     threadTree.rightTag = THREAD;
-    __block binaryTreeNode *preNode;
+    __block BinaryTreeNode *preNode;
     if (!self.root) {
         threadTree.leftChild = threadTree;
     }else{
-        binaryTreeNode *theFarLeftNode = self.root;
+        BinaryTreeNode *theFarLeftNode = self.root;
         while (theFarLeftNode.leftChild) {
             theFarLeftNode = theFarLeftNode.leftChild;
         }
         threadTree.leftChild = theFarLeftNode;
         preNode = threadTree;
         
-        [self postOrderTraverseWithBlock:^(binaryTreeNode *currentNode) {
-//            if (0) {
-//            
-//            }else{
+        [self postOrderTraverseWithBlock:^(BinaryTreeNode *currentNode) {
+            
             if (!currentNode.leftChild) {
                 currentNode.leftTag = THREAD;
                 currentNode.leftChild = preNode;
@@ -444,7 +445,7 @@ typedef enum : NSUInteger {
 
 - (void)unthreading  //去线索化方法
 {
-    __block binaryTreeNode *preNode = nil;
+    __block BinaryTreeNode *preNode = nil;
     
     switch (self.threadType) {
         case NoneThreaded:
@@ -453,7 +454,7 @@ typedef enum : NSUInteger {
         
         case preThreaded:
         {
-            [self preOrderTraverseThreadTreeWithBlock:^(binaryTreeNode *currentNode) {
+            [self preOrderTraverseThreadTreeWithBlock:^(BinaryTreeNode *currentNode) {
                 if (currentNode.leftTag) {
                     currentNode.leftChild = nil;
                 }
@@ -474,7 +475,7 @@ typedef enum : NSUInteger {
         }
         case inOrderThreaded:
         {
-            [self inOrderTraverseThreadTreeWithBlock:^(binaryTreeNode *currentNode) {
+            [self inOrderTraverseThreadTreeWithBlock:^(BinaryTreeNode *currentNode) {
                 if (currentNode.leftTag) {
                     currentNode.leftChild = nil;
                 }
@@ -498,7 +499,7 @@ typedef enum : NSUInteger {
         case postOrderThreaded:
             
         {
-            [self postOrderTraverseThreadTreeWithBlock:^(binaryTreeNode *currentNode) {
+            [self postOrderTraverseThreadTreeWithBlock:^(BinaryTreeNode *currentNode) {
                 if (currentNode.leftTag) {
                     currentNode.leftTag = LINK;
                     currentNode.leftChild = nil;

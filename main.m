@@ -7,15 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "List.h"
-#import "stack.h"
-#import "Queue.h"
-#import "binaryTree.h"
-#import "tree.h"
-#import "OLGraph.h"
-#import "AdGraph.h"
-
-
+#import "ViDataStructures.h"
 
 void insertSort(int * arr, int length);
 void selectSort(int * arr, int length);
@@ -74,50 +66,50 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@",list);
         
         printf("\n遍历测试(数字均为原值+1)\n");
-        [list travelList:^(listNode *currentNode, NSInteger index) {
+        [list travelList:^(ListNode *currentNode, NSInteger index) {
            printf("%ld\n",[(NSNumber*)currentNode.Object integerValue] + 1);
         }];
         
         //栈 stack
         printf("\n\n栈 stack\n");
         
-        stack *Stack = [[stack alloc] init]; //构造空栈
+        Stack *stack = [[Stack alloc] init]; //构造空栈
         
-        [Stack push:@"one"];
-        [Stack push:@"two"];
-        [Stack push:@"three"]; //元素进栈
+        [stack push:@"one"];
+        [stack push:@"two"];
+        [stack push:@"three"]; //元素进栈
         
-        printf("\nlength is %ld\n",Stack.length);
+        printf("\nlength is %ld\n",stack.length);
         
-        NSLog(@"%@",[Stack top]);  //栈顶元素
+        NSLog(@"%@",[stack top]);  //栈顶元素
         
 
         
-        if ([Stack isEmpty]) {          //测试空栈验证方法
+        if ([stack isEmpty]) {          //测试空栈验证方法
             NSLog(@"此时为空栈");
         }else{
             NSLog(@"此时非空栈");
         }
         
         NSString *str;
-        while ((str = [Stack pop])) {  //元素出栈
+        while ((str = [stack pop])) {  //元素出栈
             NSLog(@"%@",str);
         }
         
         str = nil;
         
-        [Stack clearStack];  //清栈
+        [stack clearStack];  //清栈
         
-        if ([Stack isEmpty]) {          //测试空栈验证方法
+        if ([stack isEmpty]) {          //测试空栈验证方法
             NSLog(@"此时为空栈");
         }else{
             NSLog(@"此时非空栈");
         }
         
-        Stack = [[stack alloc] initWithArray:arr];
+        stack = [[Stack alloc] initWithArray:arr];
         
-        while (([Stack top])) {  //元素出栈
-            NSLog(@"%@",[Stack pop]);
+        while (([stack top])) {  //元素出栈
+            NSLog(@"%@",[stack pop]);
         }
         
         
@@ -148,7 +140,7 @@ int main(int argc, const char * argv[]) {
         printf("\n出队列\n");
         
         while (queue.Head) {    //出队列
-            NSLog(@"%@",[queue DeQueue]);
+            NSLog(@"%@",[queue deQueue]);
         }
         
         //二叉树 binaryTree
@@ -157,20 +149,20 @@ int main(int argc, const char * argv[]) {
         NSArray *arr1 = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G"];
         NSArray *arr2 = @[@"C",@"B",@"E",@"D",@"A",@"F",@"G"];
         
-        binaryTree *tree = [binaryTree treeWithPreSequence:arr1 andInSequence:arr2]; //用先序序列与中序序列构造二叉树
+        BinaryTree *tree = [BinaryTree treeWithPreSequence:arr1 andInSequence:arr2]; //用先序序列与中序序列构造二叉树
         
         printf("\n先序遍历二叉树\n");
-        [tree preOrderTraverseWithBlock:^(binaryTreeNode *currentNode) {
+        [tree preOrderTraverseWithBlock:^(BinaryTreeNode *currentNode) {
             NSLog(@"%@",currentNode.value);
         }];
         
         printf("\n中序遍历二叉树\n");
-        [tree inOrderTraverseWithBlock:^(binaryTreeNode *currentNode) {
+        [tree inOrderTraverseWithBlock:^(BinaryTreeNode *currentNode) {
             NSLog(@"%@",currentNode.value);
         }];
         
         printf("\n后序遍历二叉树\n");
-        [tree postOrderTraverseWithBlock:^(binaryTreeNode *currentNode) {
+        [tree postOrderTraverseWithBlock:^(BinaryTreeNode *currentNode) {
             NSLog(@"%@",currentNode.value);
         }];
         

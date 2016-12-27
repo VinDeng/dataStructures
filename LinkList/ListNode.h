@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "list.h"
 
-@interface listNode : NSObject
+@interface ListNode : NSObject
 
 @property (nonatomic) id Object;
-@property (nonatomic) listNode * next;
-@property (nonatomic, weak) listNode * pre;
+@property (nonatomic) ListNode * next;
+@property (nonatomic, weak) ListNode * pre;
 
 + (instancetype)creatNodeWithObject:(id)Object;
 

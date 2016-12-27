@@ -26,7 +26,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.head = [listNode creatNodeWithObject:nil];
+        self.head = [ListNode creatNodeWithObject:nil];
         self.head.next = nil;
         self.head.pre = nil;
 //        self.listDelegate = self;
@@ -51,43 +51,21 @@
 - (NSInteger)length
 {
     int count = 0; //默认包含头结点，长度至少为1
-    listNode *currentNode = self.head;
+    ListNode *currentNode = self.head;
     while ((currentNode = currentNode.next)) {
         count ++;
     }
     return count + 1;
 }
 
-//#pragma mark -
-//#pragma mark 遍历方法，用代理模式去执行遍历回调
-//
-//- (void)travelList
-//{   int count = 0;
-//    listNode *currentNode = self.head;
-//    while (currentNode) {
-////        NSLog(@"i=%d, data=%@,length=%ld"  //调试代码
-////              ,count++,currentNode.Object,(long)self.length);
-//        
-//        if ([self.listDelegate respondsToSelector:@selector(visit:atIndex:)])
-//        {
-//            
-//            [self.listDelegate visit:currentNode atIndex:count];
-//        }
-//        
-//        currentNode = currentNode.next;
-//        count++;
-//    }
-//    
-//}
-
-
 #pragma mark -
 #pragma mark 遍历方法，用block去执行遍历回调
 
-- (void)travelList:(nullable void(^)(listNode* currentNote, NSInteger index))visitBlock
+- (void)travelList:(nullable void(^)(ListNode
+                                     * currentNote, NSInteger index))visitBlock
 {
     int count = 0;
-    listNode *currentNode = self.head;
+    ListNode *currentNode = self.head;
 
     while (currentNode) {
         
@@ -104,18 +82,18 @@
 #pragma mark 各种插入方法
 - (void)insertObjectAtLastIndex:(id)object
 {
-    listNode *currentNode = self.head;
+    ListNode *currentNode = self.head;
     for (int i = 0; i < self.length - 1; i++) {
         currentNode = currentNode.next;
     }
-    listNode *newNode = [listNode creatNodeWithObject:object];
+    ListNode *newNode = [ListNode creatNodeWithObject:object];
     currentNode.next = newNode;
     
 }
 
 - (void)insertObjectAtFirstIndex:(id)object
 {
-    listNode *newHead = [listNode creatNodeWithObject:object];
+    ListNode *newHead = [ListNode creatNodeWithObject:object];
     newHead.next = self.head.next;
     self.head.next = newHead;
 }
@@ -123,7 +101,7 @@
 - (void)insertObject:(id)object inIndex:(NSInteger)index
 {
     if (index < 0) { //输入出错
-         [NSException exceptionWithName:@"link oversize" reason:@"input index is small than zero" userInfo:nil];
+         [[NSException exceptionWithName:@"link oversize" reason:@"input index is small than zero" userInfo:nil] raise];
     }else
     
     if (index > self.length - 1) { //越界
@@ -135,8 +113,8 @@
     }else if(index == 0){  //插入头结点
         [self insertObjectAtFirstIndex:object];
     }else{  //一般插入
-        listNode *currentNode = self.head;
-        listNode *newNode = [listNode creatNodeWithObject:object];
+        ListNode *currentNode = self.head;
+        ListNode *newNode = [ListNode creatNodeWithObject:object];
         for (int i = 0; i < index - 1; i++) {
             currentNode = currentNode.next;
         }
@@ -162,7 +140,7 @@
     if (index == 0) {
         self.head = self.head.next;
     }else{
-        listNode *currentNode = self.head;
+        ListNode *currentNode = self.head;
         for (int i = 0; i < index - 1; i++) {
             currentNode = currentNode.next;
         }
@@ -181,7 +159,7 @@
     }else if (index > self.length - 1){
         return nil;
     }else{
-        listNode *currentNote = self.head;
+        ListNode *currentNote = self.head;
         for (int i = 0; i < index; i++) {
             currentNote = currentNote.next;
         }
@@ -193,7 +171,7 @@
 {
   __block NSMutableArray *locationArray = [[NSMutableArray alloc] init];
     
-    [self travelList:^void(listNode *currentNote, NSInteger index) {
+    [self travelList:^void(ListNode *currentNote, NSInteger index) {
         if (currentNote.Object == object) {
             [locationArray addObject:[NSNumber numberWithInteger:index]];
         }
@@ -210,7 +188,7 @@
 {
     __block NSMutableArray *locationArray = [[NSMutableArray alloc] init];
     
-    [self travelList:^void(listNode *currentNote, NSInteger index) {
+    [self travelList:^void(ListNode *currentNote, NSInteger index) {
         if (currentNote.Object == object) {
             [locationArray addObject:[NSNumber numberWithInteger:index]];
         }
@@ -230,42 +208,34 @@
 - (void)sortWithComparisonBlock:(NSComparisonResult (^)(id _Nonnull, id _Nonnull))cmptr
 {
     __block NSMutableArray *array = [[NSMutableArray alloc] init];
-    [self travelList:^(listNode *currentNode, NSInteger index) {
+    [self travelList:^(ListNode *currentNode, NSInteger index) {
         [array addObject:currentNode.Object];
     }];
-    array = [array sortedArrayUsingComparator:cmptr];
+    [array sortedArrayUsingComparator:cmptr];
     self.head = [[List alloc] initWithArray:array].head;
     array = nil;
 }
 
-#pragma mark -
-#pragma mark 代理的遍历回调方法
-
-- (void)visit:(listNode *)currentNode atIndex:(NSInteger)index
-{
-    NSLog(@"i=%d, data=%@,length=%ld"
-          ,index,currentNode.Object,(long)self.length);
-}
 
 #pragma mark -
 #pragma mark 销毁链表方法，主要避免循环链表与双向链表无法通过设置头结点为nil销毁
 
 - (void)destroyList
 {
-//    [self travelList:^(listNode *currentNode, NSInteger index) {
-//        if (currentNode.next) {
-////            listNode *preNode = currentNode;
-//            currentNode = currentNode.next;
-////            preNode.next = nil;
-////            preNode = nil;
-//        }
-//    }];
+    [self travelList:^(ListNode *currentNode, NSInteger index) {
+        if (currentNode.next) {
+            ListNode *preNode = currentNode;
+            currentNode = currentNode.next;
+            preNode.next = nil;
+            preNode = nil;
+        }
+    }];
 }
 
 - (void)dealloc
 {
     [self destroyList];
-//    NSLog(@"list dealloc");
+    NSLog(@"list dealloc");
 }
 
 #pragma mark-
@@ -273,7 +243,7 @@
 - (void)mergeSort
 {
     if (self.head.next) {
-        listNode *node = self.head.next;
+        ListNode *node = self.head.next;
         mergeSort(&node);
         self.head.next = node;
     }
@@ -281,14 +251,14 @@
 
 }
 
-void mergeSort(listNode ** headRef)
+void mergeSort(ListNode ** headRef)
 {
-    listNode *firstNode = *headRef;
+    ListNode *firstNode = *headRef;
     if (!firstNode ||!firstNode.next) {
         return;
     }
-    listNode *frontNode;
-    listNode *backNode;
+    ListNode *frontNode;
+    ListNode *backNode;
     
     frontBackSplit(firstNode, &frontNode, &backNode);
     
@@ -300,14 +270,14 @@ void mergeSort(listNode ** headRef)
     NSLog(@"");
 }
 
-void frontBackSplit(listNode* source,listNode** frontRef,listNode** backRef)
+void frontBackSplit(ListNode* source,ListNode** frontRef,ListNode** backRef)
 {
     if (!source.next) {
         *frontRef = source;
         *backRef = nil;
     }else{
-        listNode *fast = source.next;
-        listNode *slow = source;
+        ListNode *fast = source.next;
+        ListNode *slow = source;
     
         while (fast) {
             fast = fast.next;
@@ -322,9 +292,9 @@ void frontBackSplit(listNode* source,listNode** frontRef,listNode** backRef)
     }
 }
 
-listNode* mergeList(listNode* listA, listNode* listB)
+ListNode* mergeList(ListNode* listA, ListNode* listB)
 {
-    listNode *resulet;
+    ListNode *resulet;
     if (!listA) {
         return listB;
     }else if(!listB){
@@ -345,9 +315,8 @@ listNode* mergeList(listNode* listA, listNode* listB)
 - (NSString *)description
 {
     NSString * voidStr = @"";
-    [self travelList:^(listNode *currentNode, NSInteger index) {
-//        NSLog(@"%@",currentNode.Object);
-       char*str = [[NSString stringWithFormat:@"%@",currentNode.Object] UTF8String];
+    [self travelList:^(ListNode *currentNode, NSInteger index) {
+       char *str = [[NSString stringWithFormat:@"%@",currentNode.Object] UTF8String];
         printf("%s\n",str);
         
     }];

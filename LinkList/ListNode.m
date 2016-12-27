@@ -6,14 +6,9 @@
 //  Copyright © 2015年 Vincent_D. All rights reserved.
 //
 
-#import "listNode.h"
+#import "ListNode.h"
 
-@implementation listNode
-//- (listNode *)creatList
-//{
-//
-//}
-
+@implementation ListNode
 
 - (instancetype)init  //禁止用户直接操纵结点生产
 {
@@ -22,7 +17,7 @@
 
 + (instancetype)creatNodeWithObject:(id)Object
 {
-    listNode *node = [[listNode alloc] initPrivate];
+    ListNode *node = [[ListNode alloc] initPrivate];
     
     node.Object = Object;
     

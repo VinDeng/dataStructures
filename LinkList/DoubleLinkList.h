@@ -8,6 +8,6 @@
 
 #import "List.h"
 
-@interface doubleLinkList : List 
+@interface DoubleLinkList : List 
 
 @end
